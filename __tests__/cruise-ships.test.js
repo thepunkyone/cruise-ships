@@ -12,4 +12,9 @@ describe('Ship constructor', () => {
         expect(typeof cruiseShip.startingPort).toBe('string');
         expect(cruiseShip.startingPort).toBe('Liverpool');
     });
+    it('cruiseShip has a setSail method', () => {
+        expect(typeof cruiseShip.setSail).toBe('function');
+        cruiseShip.setSail();
+        expect(cruiseShip.startingPort).toBeFalsy();
+    });
 });
