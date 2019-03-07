@@ -3,7 +3,7 @@ const Port = require('../src/port');
 
 describe('Ship constructor', () => {
     let cruiseShip;
-    const port = new Port(jest.fn());
+    const port = new Port('Liverpool');
     beforeEach(() => {
         cruiseShip = new Ship(port);
     });
