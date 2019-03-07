@@ -1,4 +1,6 @@
-
+function Ship(startingPort) {
+    this.startingPort = startingPort;
+};
 
 
 
