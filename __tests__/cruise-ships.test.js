@@ -1,1 +1,1 @@
-const ship = require()
+const Ship = require('../src/cruise-ships');
