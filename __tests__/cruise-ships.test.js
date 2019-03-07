@@ -3,7 +3,7 @@ const Port = require('../src/port');
 
 describe('Ship constructor', () => {
     let cruiseShip;
-    const port = new Port('Liverpool');
+    let port = new Port('Liverpool');
     beforeEach(() => {
         cruiseShip = new Ship(port);
     });
@@ -18,8 +18,9 @@ describe('Ship constructor', () => {
         expect(cruiseShip.currentPort).toBeFalsy();
     });
     it('cruiseShip has a dock method', () => {
-        cruiseShip.dock(port);
+        let calais = new Port('Calais');
+        cruiseShip.dock(calais);
         expect(cruiseShip.currentPort).toBeTruthy();
-        expect(cruiseShip.currentPort).toEqual(port);
+        expect(cruiseShip.currentPort).toEqual(calais);
     });
 });
