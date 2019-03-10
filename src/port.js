@@ -9,8 +9,12 @@ Port.prototype.addShip = function (ship) {
 
 Port.prototype.removeShip = function (ship) {
     const i = this.ships.indexOf(ship);
-    if (i < 0 || i === null || i === undefined) { throw new Error('Invalid index!'); }
-        this.ships.splice(i, 1);
+    this.ships.splice(i, 1);
 };
+
+//Sam's method with a false positive:
+// Port.prototype.removeShip = function removeShip(ship) {
+//     this.ships.splice(this.ships.indexOf[ship], 1);
+//   };
 
 module.exports = Port;

@@ -3,6 +3,7 @@ const Port = require('../src/port');
 describe('Port constructor', () => {
     const port = new Port('Dublin');
     const mockShip = jest.fn();
+    const mockShip2 = jest.fn();
 
     it('port is an object', () => {
         expect(port).toBeInstanceOf(Object);
@@ -18,11 +19,9 @@ describe('Port constructor', () => {
     });
 
     it('removeShip method', () => {
-        port.ships = [mockShip];
+        port.ships = [mockShip2, mockShip];
         port.removeShip(mockShip);
+        expect(port.ships).toEqual([mockShip2]);
         expect(port.ships).not.toContain(mockShip);
-    });
-    it('removeShip method errors when passed an invalid argument', () => {
-        expect(() => port.removeShip(mockShip)).toThrowError('Invalid index!');
     });
 });
