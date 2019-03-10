@@ -28,17 +28,15 @@ describe('Ship constructor', () => {
     });
     it('cruiseShip has a setSail method', () => {
         cruiseShip.setSail();
-        expect(dover.removeShip).toHaveBeenCalled();
+        expect(dover.removeShip).toHaveBeenCalledWith(cruiseShip);
         expect(cruiseShip.currentPort).toBeFalsy();
         expect(cruiseShip.previousPort).toEqual(dover);
-        // expect(dover.ships).not.toContain(cruiseShip);
     });
     it('cruiseShip has a dock method', () => {
         cruiseShip.setSail();
         cruiseShip.dock();
-        expect(calais.addShip).toHaveBeenCalled();
+        expect(calais.addShip).toHaveBeenCalledWith(cruiseShip);
         expect(cruiseShip.currentPort).toBeTruthy();
         expect(cruiseShip.currentPort).toEqual(calais);
-        // expect(calais.ships).toContain(cruiseShip);
     });
 });
