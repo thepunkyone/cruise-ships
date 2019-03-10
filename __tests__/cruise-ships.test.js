@@ -3,11 +3,14 @@ const Port = require('../src/port');
 const Itinerary = require('../src/itinerary');
 
 describe('Ship constructor', () => {
-    let cruiseShip;
     let dover;
+    let itinerary;
+    let cruiseShip;
+    
     beforeEach(() => {
         dover = new Port('Dover');
-        cruiseShip = new Ship(dover);
+        itinerary = new Itinerary(dover);
+        cruiseShip = new Ship(itinerary);
     });
     it('cruiseShip is an object', () => {
         expect(cruiseShip).toBeInstanceOf(Object);
