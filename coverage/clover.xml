@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1552241855521" clover="3.2.0">
-  <project timestamp="1552241855521" name="All files">
+<coverage generated="1552244008787" clover="3.2.0">
+  <project timestamp="1552244008787" name="All files">
     <metrics statements="25" coveredstatements="25" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="7" elements="32" coveredelements="32" complexity="0" loc="25" ncloc="25" packages="1" files="3" classes="3"/>
     <file name="cruise-ships.js" path="/home/vitnija/Projects/cruise-ships/src/cruise-ships.js">
       <metrics statements="15" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
@@ -27,14 +27,14 @@
     </file>
     <file name="port.js" path="/home/vitnija/Projects/cruise-ships/src/port.js">
       <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
-      <line num="2" count="16" type="stmt"/>
-      <line num="3" count="16" type="stmt"/>
-      <line num="6" count="3" type="stmt"/>
+      <line num="2" count="14" type="stmt"/>
+      <line num="3" count="14" type="stmt"/>
+      <line num="6" count="2" type="stmt"/>
       <line num="7" count="7" type="stmt"/>
-      <line num="10" count="3" type="stmt"/>
+      <line num="10" count="2" type="stmt"/>
       <line num="11" count="3" type="stmt"/>
       <line num="12" count="3" type="stmt"/>
-      <line num="15" count="3" type="stmt"/>
+      <line num="15" count="2" type="stmt"/>
     </file>
   </project>
 </coverage>
