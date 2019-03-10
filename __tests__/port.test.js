@@ -22,4 +22,7 @@ describe('Port constructor', () => {
         port.removeShip(mockShip);
         expect(port.ships).not.toContain(mockShip);
     });
+    it('removeShip method errors when passed an invalid argument', () => {
+        expect(() => port.removeShip(mockShip)).toThrowError('Invalid index!');
+    });
 });
