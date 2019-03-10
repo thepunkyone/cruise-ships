@@ -1,5 +1,4 @@
 const Ship = require('../src/cruise-ships');
-const Port = require('../src/port');
 const Itinerary = require('../src/itinerary');
 
 describe('Ship constructor', () => {
@@ -9,8 +8,8 @@ describe('Ship constructor', () => {
     let cruiseShip;
 
     beforeEach(() => {
-        dover = new Port('Dover');
-        calais = new Port('Calais');
+        dover = { name: 'Dover', ships: [], addShip: jest.fn(), removeShip: jest.fn() };
+        calais = { name: 'Calais', ships: [], addShip: jest.fn(), removeShip: jest.fn() };
         itinerary = new Itinerary([dover, calais]);
         cruiseShip = new Ship(itinerary);
     });
