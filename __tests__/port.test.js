@@ -1,16 +1,15 @@
 const Port = require('../src/port');
 
 describe('Port constructor', () => {
-    let port;
+    const port = new Port('Dublin');
     const mockShip = jest.fn();
-    beforeEach(() => {
-        port = new Port('Dublin');
-    });
+
     it('port is an object', () => {
         expect(port).toBeInstanceOf(Object);
     });
-    it('port has a name property', () => {
+    it('port has a name property and ships array', () => {
         expect(port.name).toEqual('Dublin');
+        expect(port.ships).toEqual([]);
     }); 
 
     it('addShip method', () => {
