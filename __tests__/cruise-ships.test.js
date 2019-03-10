@@ -18,7 +18,7 @@ describe('Ship constructor', () => {
         expect(cruiseShip).toBeInstanceOf(Object);
     });
     it('cruiseShip has a currentPort property', () => {
-        expect(cruiseShip.currentPort).toBe(dover);
+        expect(cruiseShip.currentPort).toEqual(dover);
     });
     it('cruiseShip is added to currentPort\'s ships', () => {
         expect(cruiseShip.currentPort.ships).toContain(cruiseShip);
@@ -30,7 +30,8 @@ describe('Ship constructor', () => {
         expect(cruiseShip.previousPort.ships).toEqual([]);
     });
     it('cruiseShip has a dock method', () => {
-        cruiseShip.dock(calais);
+        cruiseShip.setSail();
+        cruiseShip.dock();
         expect(cruiseShip.currentPort).toBeTruthy();
         expect(cruiseShip.currentPort).toEqual(calais);
         expect(cruiseShip.currentPort.ships).toContain(cruiseShip);

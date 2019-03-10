@@ -12,8 +12,9 @@ Ship.prototype.setSail = function () {
     this.currentPort = null;
 };
 
-Ship.prototype.dock = function (port) {
-    const i = this.itinerary.ports.indexOf(port);
+Ship.prototype.dock = function () {
+    const indexPreviousPort = this.itinerary.ports.indexOf(this.previousPort);
+    const i = indexPreviousPort + 1;
     this.currentPort = this.itinerary.ports[i];
     this.currentPort.addShip(this);
 };
