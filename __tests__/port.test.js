@@ -9,7 +9,11 @@ describe('Port constructor', () => {
         expect(port).toBeInstanceOf(Object);
     });
     it('port has a name property', () => {
-        port = new Port('Dublin');
         expect(port.name).toEqual('Dublin');
     }); 
+
+    it('addShip method', () => {
+        port.addShip();
+        expect(port.ships.length).toBeTruthy();
+    });
 });
