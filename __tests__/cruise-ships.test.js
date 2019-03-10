@@ -6,10 +6,10 @@ describe('Ship constructor', () => {
     let dover;
     let itinerary;
     let cruiseShip;
-    
+
     beforeEach(() => {
         dover = new Port('Dover');
-        itinerary = new Itinerary(dover);
+        itinerary = new Itinerary([dover]);
         cruiseShip = new Ship(itinerary);
     });
     it('cruiseShip is an object', () => {

@@ -7,7 +7,7 @@ describe('Itinerary constructor', () => {
     let itinerary;
     beforeEach(() => {
         dover = new Port('Dover');
-        itinerary = new Itinerary(dover);
+        itinerary = new Itinerary([dover]);
     });
     it('Itinerary has an starting port', () => {
         expect(itinerary.ports).toEqual([dover]);
