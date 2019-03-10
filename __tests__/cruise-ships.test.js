@@ -21,6 +21,7 @@ describe('Ship constructor', () => {
     });
     it('cruiseShip has a currentPort property', () => {
         expect(cruiseShip.currentPort).toEqual(dover);
+        expect(cruiseShip.previousPort).toBeFalsy();
     });
     it('cruiseShip is added to currentPort\'s ships', () => {
         expect(dover.addShip).toHaveBeenCalledWith(cruiseShip);
