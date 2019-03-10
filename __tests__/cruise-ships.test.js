@@ -26,5 +26,6 @@ describe('Ship constructor', () => {
         cruiseShip.dock(calais);
         expect(cruiseShip.currentPort).toBeTruthy();
         expect(cruiseShip.currentPort).toEqual(calais);
+        expect(cruiseShip.currentPort.ships).toEqual([cruiseShip]);
     });
 });
