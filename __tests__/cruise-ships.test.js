@@ -27,7 +27,7 @@ describe('Ship constructor', () => {
         cruiseShip.setSail();
         expect(cruiseShip.currentPort).toBeFalsy();
         expect(cruiseShip.previousPort).toEqual(dover);
-        expect(cruiseShip.previousPort.ships).toEqual([]);
+        expect(cruiseShip.previousPort.ships).not.toContain(cruiseShip);
     });
     it('cruiseShip has a dock method', () => {
         cruiseShip.setSail();
