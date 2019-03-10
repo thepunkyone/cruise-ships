@@ -1,6 +1,4 @@
-const Ship = require('../src/cruise-ships');
 const Port = require('../src/port');
-const Itinerary = require('../src/itinerary');
 
 describe('Port constructor', () => {
     let port;
@@ -17,12 +15,12 @@ describe('Port constructor', () => {
 
     it('addShip method', () => {
         port.addShip(mockShip);
-        expect(port.ships).toEqual([mockShip]);
+        expect(port.ships).toContain(mockShip);
     });
 
     it('removeShip method', () => {
         port.ships = [mockShip];
         port.removeShip(mockShip);
-        expect(port.ships).toEqual([]);
+        expect(port.ships).not.toContain(mockShip);
     });
 });
