@@ -1,5 +1,6 @@
 const Ship = require('../src/cruise-ships');
 const Port = require('../src/port');
+const Itinerary = require('../src/itinerary');
 
 describe('Ship constructor', () => {
     let cruiseShip;
