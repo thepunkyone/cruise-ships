@@ -6,12 +6,14 @@ describe('Ship constructor', () => {
     let calais;
     let itinerary;
     let cruiseShip;
-    const mockAddShip = jest.fn();
-    const mockRemoveShip = jest.fn();
+    const port = {
+        addShip: jest.fn(),
+        removeShip: jest.fn()
+    };
 
     beforeEach(() => {
-        dover = { name: 'Dover', ships: [], addShip: mockAddShip, removeShip: mockRemoveShip };
-        calais = { name: 'Calais', ships: [], addShip: mockAddShip, removeShip: mockRemoveShip };
+        dover = { name: 'Dover', ships: [], ...port };
+        calais = { name: 'Calais', ships: [], ...port };
         itinerary = new Itinerary([dover, calais]);
         cruiseShip = new Ship(itinerary);
     });
