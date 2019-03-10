@@ -1,6 +1,6 @@
 function Ship(currentPort) {
     this.currentPort = currentPort;
-    this.currentPort.ships.push(this);
+    this.currentPort.addShip(this);
 };
 
 Ship.prototype.setSail = function () {
