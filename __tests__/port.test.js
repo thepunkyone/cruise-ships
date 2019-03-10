@@ -2,6 +2,7 @@ const Port = require('../src/port');
 
 describe('Port constructor', () => {
     let port;
+    const mockShip = jest.fn();
     beforeEach(() => {
         port = new Port('Dublin');
     });
@@ -13,7 +14,13 @@ describe('Port constructor', () => {
     }); 
 
     it('addShip method', () => {
-        port.addShip();
-        expect(port.ships.length).toBeTruthy();
+        port.addShip(mockShip);
+        expect(port.ships).toEqual([mockShip]);
+    });
+
+    it('removeShip method', () => {
+        port.ships = [mockShip];
+        port.removeShip(mockShip);
+        expect(port.ships).toEqual([]);
     });
 });
