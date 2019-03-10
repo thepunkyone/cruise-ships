@@ -15,7 +15,6 @@ describe('Ship constructor', () => {
         expect(cruiseShip.currentPort).toBe(dover);
     });
     it('cruiseShip is added to currentPort\'s ships', () => {
-        console.log(cruiseShip.currentPort);
         expect(cruiseShip.currentPort.ships).toEqual([cruiseShip]);
     });
     it('cruiseShip has a setSail method', () => {
