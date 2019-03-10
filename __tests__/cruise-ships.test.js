@@ -4,12 +4,14 @@ const Itinerary = require('../src/itinerary');
 
 describe('Ship constructor', () => {
     let dover;
+    let calais;
     let itinerary;
     let cruiseShip;
 
     beforeEach(() => {
         dover = new Port('Dover');
-        itinerary = new Itinerary([dover]);
+        calais = new Port('Calais');
+        itinerary = new Itinerary([dover, calais]);
         cruiseShip = new Ship(itinerary);
     });
     it('cruiseShip is an object', () => {
@@ -22,13 +24,12 @@ describe('Ship constructor', () => {
         expect(cruiseShip.currentPort.ships).toContain(cruiseShip);
     });
     it('cruiseShip has a setSail method', () => {
-        const previousCurrentPort = cruiseShip.currentPort;
         cruiseShip.setSail();
         expect(cruiseShip.currentPort).toBeFalsy();
-        expect(previousCurrentPort.ships).toEqual([]);
+        expect(cruiseShip.previousPort).toEqual(dover);
+        expect(cruiseShip.previousPort.ships).toEqual([]);
     });
     it('cruiseShip has a dock method', () => {
-        const calais = new Port('Calais');
         cruiseShip.dock(calais);
         expect(cruiseShip.currentPort).toBeTruthy();
         expect(cruiseShip.currentPort).toEqual(calais);
