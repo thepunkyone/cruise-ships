@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1552235496067" clover="3.2.0">
-  <project timestamp="1552235496067" name="All files">
+<coverage generated="1552235747001" clover="3.2.0">
+  <project timestamp="1552235747002" name="All files">
     <metrics statements="17" coveredstatements="17" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6" elements="23" coveredelements="23" complexity="0" loc="17" ncloc="17" packages="1" files="2" classes="2"/>
     <file name="cruise-ships.js" path="/home/vitnija/Projects/cruise-ships/src/cruise-ships.js">
       <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
