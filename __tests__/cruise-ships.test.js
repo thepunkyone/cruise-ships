@@ -3,8 +3,9 @@ const Port = require('../src/port');
 
 describe('Ship constructor', () => {
     let cruiseShip;
-    const dover = new Port('Dover');
+    let dover;
     beforeEach(() => {
+        dover = new Port('Dover');
         cruiseShip = new Ship(dover);
     });
     it('cruiseShip is an object', () => {
@@ -12,6 +13,10 @@ describe('Ship constructor', () => {
     });
     it('cruiseShip has a currentPort property', () => {
         expect(cruiseShip.currentPort).toBe(dover);
+    });
+    it('cruiseShip is added to currentPort\'s ships', () => {
+        console.log(cruiseShip.currentPort);
+        expect(cruiseShip.currentPort.ships).toEqual([cruiseShip]);
     });
     it('cruiseShip has a setSail method', () => {
         cruiseShip.setSail();
