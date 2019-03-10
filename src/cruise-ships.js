@@ -4,6 +4,7 @@ function Ship(currentPort) {
 };
 
 Ship.prototype.setSail = function () {
+    this.currentPort.removeShip(this);
     this.currentPort = null;
 };
 

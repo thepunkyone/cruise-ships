@@ -18,8 +18,10 @@ describe('Ship constructor', () => {
         expect(cruiseShip.currentPort.ships).toEqual([cruiseShip]);
     });
     it('cruiseShip has a setSail method', () => {
+        const previousCurrentPort = cruiseShip.currentPort;
         cruiseShip.setSail();
         expect(cruiseShip.currentPort).toBeFalsy();
+        expect(previousCurrentPort.ships).toEqual([]);
     });
     it('cruiseShip has a dock method', () => {
         const calais = new Port('Calais');
