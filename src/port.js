@@ -7,4 +7,9 @@ Port.prototype.addShip = function (ship) {
     this.ships.push(ship);
 };
 
+Port.prototype.removeShip = function (ship) {
+    const i = this.ships.indexOf(ship);
+    this.ships.splice(i, 1);
+};
+
 module.exports = Port;
