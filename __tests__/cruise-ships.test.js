@@ -1,5 +1,4 @@
 const Ship = require('../src/cruise-ships');
-const Itinerary = require('../src/itinerary');
 
 describe('Ship constructor', () => {
     let dover;
@@ -14,7 +13,7 @@ describe('Ship constructor', () => {
     beforeEach(() => {
         dover = { name: 'Dover', ships: [], ...port };
         calais = { name: 'Calais', ships: [], ...port };
-        itinerary = new Itinerary([dover, calais]);
+        itinerary = { ports: [dover, calais] };
         cruiseShip = new Ship(itinerary);
     });
     it('cruiseShip is an object', () => {
