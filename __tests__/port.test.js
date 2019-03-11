@@ -16,12 +16,16 @@ describe('Port constructor', () => {
     it('addShip method', () => {
         port.addShip(mockShip);
         expect(port.ships).toContain(mockShip);
+        port.addShip(mockShip2);
+        expect(port.ships).toEqual([mockShip, mockShip2]);
     });
 
     it('removeShip method', () => {
-        port.ships = [mockShip2, mockShip];
+        port.removeShip(mockShip2);
+        expect(port.ships).toEqual([mockShip]);
+        expect(port.ships).not.toContain(mockShip2);
         port.removeShip(mockShip);
-        expect(port.ships).toEqual([mockShip2]);
+        expect(port.ships).toEqual([]);
         expect(port.ships).not.toContain(mockShip);
     });
 });
