@@ -2,8 +2,8 @@ const Port = require('../src/port');
 
 describe('Port constructor', () => {
     const port = new Port('Dublin');
-    const mockShip = jest.fn();
-    const mockShip2 = jest.fn();
+    const mockShip = {name: 'mockShip'};
+    const mockShip2 = {name: 'mockShip2'};
 
     it('port is an object', () => {
         expect(port).toBeInstanceOf(Object);
