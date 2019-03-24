@@ -39,4 +39,9 @@ describe('Ship constructor', () => {
     expect(cruiseShip.currentPort).toBeTruthy();
     expect(cruiseShip.currentPort).toEqual(calais);
   });
+  it('setSail method throws an error if itinerary has been completed', () => {
+    cruiseShip.setSail();
+    cruiseShip.dock();
+    expect(() => cruiseShip.setSail()).toThrowError('Itinerary has been completed! Assign a new itinerary to continue.');
+  });
 });
