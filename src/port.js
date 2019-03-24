@@ -12,7 +12,7 @@ Port.prototype.removeShip = function (ship) {
     const i = this.ships.indexOf(ship);
   	this.ships.splice(i, 1);
   } else {
-		throw new Error('Ship not found at the port!');
+		throw new Error(`${ship.name} not found at the port!`);
 	}
 };
 

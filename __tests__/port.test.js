@@ -4,7 +4,7 @@ describe('Port constructor', () => {
   const port = new Port('Dublin');
   const mockShip = { name: 'mockShip' };
   const mockShip2 = { name: 'mockShip2' };
-  const unknownShip = {};
+  const unknownShip = { name: 'Unknown'};
 
   it('port is an object', () => {
     expect(port).toBeInstanceOf(Object);
@@ -30,6 +30,6 @@ describe('Port constructor', () => {
     expect(port.ships).toEqual([]);
     expect(port.ships).not.toContain(mockShip);
 
-    expect(() => port.removeShip(unknownShip)).toThrowError('Ship not found at the port!');
+    expect(() => port.removeShip(unknownShip)).toThrowError('Unknown not found at the port!');
   });
 });
