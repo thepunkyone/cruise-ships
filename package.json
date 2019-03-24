@@ -2,7 +2,7 @@
   "name": "cruise-ships",
   "version": "1.0.0",
   "description": "Cruise Ships Exercise by Vitnija Bluzma https://github.com/thepunkyone",
-  "main": "/src/index.js",
+  "main": "/src/cruise-ships.js",
   "scripts": {
     "test": "jest --verbose --coverage"
   },
