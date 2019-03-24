@@ -1,15 +1,15 @@
 function Port(name) {
-    this.name = name;
-    this.ships = [];
-};
+  this.name = name;
+  this.ships = [];
+}
 
 Port.prototype.addShip = function (ship) {
-    this.ships.push(ship);
+  this.ships.push(ship);
 };
 
 Port.prototype.removeShip = function (ship) {
-    const i = this.ships.indexOf(ship);
-    this.ships.splice(i, 1);
+  const i = this.ships.indexOf(ship);
+  this.ships.splice(i, 1);
 };
 
 //Sam's method with a false positive:
